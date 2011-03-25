@@ -18,8 +18,9 @@ public class RobotArmiesDB extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL("CREATE TABLE robots (" + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
 				"type TEXT NOT NULL, " +
-				"originalhp UNSIGNED NOT NULL, " +
-				"currenthp UNSIGNED NOT NULL, " +
+				"hpPer UNSIGNED NOT NULL, " +
+				"numberOf UNSIGNED NOT NULL, " +
+				"groupHealthPercentage UNSIGNED NOT NULL, " +
 				"owner INTEGER, " +
 				"FOREIGN KEY(owner) REFERENCES users(_id) );");
 		db.execSQL("CREATE TABLE users (" + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
