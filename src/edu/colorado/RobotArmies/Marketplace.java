@@ -3,7 +3,6 @@ import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.widget.TextView;
 
 
@@ -25,5 +24,6 @@ public class Marketplace extends Activity {
         }
         TextView text1 = (TextView) findViewById(R.id.textView1);
         text1.setText("You currently have " + joules + " joules to spend");
+        c.close();
     }
 }

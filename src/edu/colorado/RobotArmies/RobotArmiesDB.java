@@ -21,14 +21,19 @@ public class RobotArmiesDB extends SQLiteOpenHelper {
 				"originalhp UNSIGNED NOT NULL, " +
 				"currenthp UNSIGNED NOT NULL, " +
 				"owner INTEGER, " +
-				"FOREIGN KEY(owner) REFERENCES users(id) );");
+				"FOREIGN KEY(owner) REFERENCES users(_id) );");
 		db.execSQL("CREATE TABLE users (" + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-				"username TEXT, " +
-				"joules UNSIGNED NOT NULL);");
+				"weight UNSIGNED NOT NULL, " +
+				"joules UNSIGNED NOT NULL, " +
+				"username TEXT NOT NULL);");
 		
 		ContentValues values = new ContentValues();
+		
+		//initialize DB to default values
 		values.put("joules", 0);
-		values.put("username", "ben limmer");
+		values.put("weight", -1);
+		values.put("username", "");
+		
 		db.insertOrThrow("users", null, values);
 		
 	}
