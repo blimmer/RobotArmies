@@ -10,4 +10,7 @@ public class EnterData extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter_data);
     }
+    
+    //TODO: add dialogs for entering data and saving the information
+    //into the database
 }

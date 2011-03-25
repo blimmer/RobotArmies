@@ -26,4 +26,8 @@ public class Marketplace extends Activity {
         text1.setText("You currently have " + joules + " joules to spend");
         c.close();
     }
+    
+    //TODO: display available options
+    //TODO: add logic to check purchasing ability
+    //TODO: add communication with robots SQL table
 }

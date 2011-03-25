@@ -27,10 +27,11 @@ public class RobotArmiesDB extends SQLiteOpenHelper {
 				"weight UNSIGNED NOT NULL, " +
 				"joules UNSIGNED NOT NULL, " +
 				"username TEXT NOT NULL);");
+		//TODO: add a table for tracking exercise data
 		
 		ContentValues values = new ContentValues();
 		
-		//initialize DB to default values
+		//initialize users DB to default values
 		values.put("joules", 0);
 		values.put("weight", -1);
 		values.put("username", "");
