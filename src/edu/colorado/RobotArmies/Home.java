@@ -5,6 +5,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
+import android.widget.*;
+import android.widget.AdapterView.OnItemClickListener;
+import android.view.*;
 
 public class Home extends Activity {
 	
@@ -36,6 +39,16 @@ public class Home extends Activity {
         		}
         	}
         }
+        
+        GridView gridview = (GridView) findViewById(R.id.gridview);
+        gridview.setAdapter(new ImageAdapter(this));
+        
+        gridview.setOnItemClickListener(new OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                Toast.makeText(Home.this, "" + position, Toast.LENGTH_SHORT).show();
+            }
+        });
+
         
         //SQLiteDatabase db = database.getWritableDatabase();
         //ContentValues values = new ContentValues();
