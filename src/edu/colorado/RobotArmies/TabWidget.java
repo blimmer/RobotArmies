@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.TabHost;
 
 public class TabWidget extends TabActivity {
+	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 

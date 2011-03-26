@@ -10,4 +10,6 @@ public class Scoreboard extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.scoreboard);
     }
+    
+    //TODO: backend communication with server to grab stats
 }
