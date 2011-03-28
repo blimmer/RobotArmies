@@ -47,7 +47,8 @@ public class Home extends Activity {
         			alert2.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
         			public void onClick(DialogInterface dialog, int whichButton) {
         			
-        				Editable weight = weight_input.getText();
+        				@SuppressWarnings("unused")
+						Editable weight = weight_input.getText();
         			  // Do something with value!
         			  }
         			});
@@ -78,7 +79,8 @@ public class Home extends Activity {
 
         			alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
         			public void onClick(DialogInterface dialog, int whichButton) {
-        				Editable name = name_input.getText();
+        				@SuppressWarnings("unused")
+						Editable name = name_input.getText();
         				
         			  // Do something with value!
         			  }
