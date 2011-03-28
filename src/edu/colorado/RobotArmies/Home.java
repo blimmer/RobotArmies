@@ -24,6 +24,16 @@ public class Home extends Activity {
         
         SQLiteDatabase db = database.getWritableDatabase();
         
+        
+        
+        Cursor cu = db.query("users", new String[] { "joules" }, null, null, null, null, "_id");
+        int joules = -1;
+        if (cu.moveToFirst()) {
+            joules = cu.getInt(0);
+        }
+        TextView text1 = (TextView) findViewById(R.id.textView1);
+        text1.setText("You currently have " + joules + " joules to spend");
+       
         SQLiteStatement s = db.compileStatement("select count(*) from users;");
         long count = s.simpleQueryForLong();
         if (count < 1) {
