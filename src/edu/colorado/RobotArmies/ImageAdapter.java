@@ -44,10 +44,9 @@ public class ImageAdapter extends BaseAdapter{
 
     // references to our images
     private Integer[] mThumbIds = {
-    	R.drawable.icon, R.drawable.icon,	
-    	R.drawable.icon, R.drawable.icon,
-    	R.drawable.icon, R.drawable.icon,
-    	R.drawable.icon, R.drawable.icon
+    	R.drawable.minionbot, R.drawable.rocketbot,	
+    	R.drawable.repairbot, R.drawable.masterbot
+    	
 
     };
 
