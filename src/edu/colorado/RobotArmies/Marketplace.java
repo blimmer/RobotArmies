@@ -3,7 +3,12 @@ import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 
 public class Marketplace extends Activity {
@@ -23,9 +28,12 @@ public class Marketplace extends Activity {
             joules = c.getInt(0);
         }
         TextView text1 = (TextView) findViewById(R.id.textView1);
-        text1.setText("You currently have " + joules + " joules to spend");
+        text1.setText("Welcome to the marketplace! You currently have " + joules + " joules to spend");
         c.close();
+        
     }
+    
+    
     
     //TODO: display available options
     //TODO: add logic to check purchasing ability
