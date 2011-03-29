@@ -38,6 +38,8 @@ public class RobotArmiesDB extends SQLiteOpenHelper {
 		
 		db.insertOrThrow("users", null, values);
 		
+		
+		
 	}
 
 	@Override

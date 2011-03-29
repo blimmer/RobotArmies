@@ -2,6 +2,7 @@ package edu.colorado.RobotArmies;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -22,7 +23,7 @@ public class Home extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
         
-        SQLiteDatabase db = database.getWritableDatabase();
+        final SQLiteDatabase db = database.getWritableDatabase();
         
         
         
@@ -33,7 +34,18 @@ public class Home extends Activity {
         }
         TextView text1 = (TextView) findViewById(R.id.textView1);
         text1.setText("You currently have " + joules + " joules to spend");
-       
+        
+        cu = db.query("users", new String[] { "username" }, null, null, null, null, "_id");
+        
+        
+        String name = new String();
+        if (cu.moveToFirst()) {
+            name = cu.getString(0);
+        }
+        
+        TextView text2 = (TextView) findViewById(R.id.textView2);
+        text2.setText("Welcome " + name + ", are you ready to win at robots?");
+        
         SQLiteStatement s = db.compileStatement("select count(*) from users;");
         long count = s.simpleQueryForLong();
         if (count < 1) {
@@ -57,9 +69,15 @@ public class Home extends Activity {
         			alert2.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
         			public void onClick(DialogInterface dialog, int whichButton) {
         			
-        				@SuppressWarnings("unused")
+        				
 						Editable weight = weight_input.getText();
-        			  // Do something with value!
+        				String weightS = weight.toString();
+        				ContentValues initialUser = new ContentValues();
+        				initialUser.put("weight",weightS);
+        				initialUser.put("joules", 0);
+        				
+        				db.update("users",initialUser,"joules=?", new String[]{"0"});
+        				// Do something with value!
         			  }
         			});
 
@@ -91,6 +109,10 @@ public class Home extends Activity {
         			public void onClick(DialogInterface dialog, int whichButton) {
         				@SuppressWarnings("unused")
 						Editable name = name_input.getText();
+        				String nameS = name.toString();
+        				ContentValues initialUser = new ContentValues();
+        				initialUser.put("username",nameS);
+        				db.update("users",initialUser, "joules=?", new String[]{"0"});
         				
         			  // Do something with value!
         			  }
