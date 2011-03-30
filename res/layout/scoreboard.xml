@@ -4,5 +4,37 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-    <TextView android:text="This is the scoreboard tab" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tableLayout1">
+    	<TableRow 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	>
+    		<TextView android:text="Mary" android:layout_width="match_parent" android:layout_height="match_parent">
+    		</TextView>
+    		<TextView android:text="1200" android:layout_width="match_parent" android:layout_height="match_parent">
+    		</TextView>
+    	</TableRow>
+    	
+    	<TableRow 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	>
+    		<TextView android:text="You" android:layout_width="match_parent" android:layout_height="match_parent">
+    		</TextView>
+    		<TextView android:text="1000" android:layout_width="match_parent" android:layout_height="match_parent">
+    		</TextView>
+    	</TableRow>
+    	<TableRow 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	>
+    		<TextView android:text="Charles" android:layout_width="match_parent" android:layout_height="match_parent">
+    		</TextView>
+    		<TextView android:text="800" android:gravity="right" android:layout_width="match_parent" android:layout_height="match_parent">
+    		</TextView>
+    	</TableRow>
+    	
+    	
+    </TableLayout>
+		
 </LinearLayout>
