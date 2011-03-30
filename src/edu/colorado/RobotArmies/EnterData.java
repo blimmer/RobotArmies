@@ -1,6 +1,7 @@
 package edu.colorado.RobotArmies;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ public class EnterData extends Activity {
     
 
         final EditText edtext = (EditText) findViewById(R.id.editText1);
+        final EditText edtext2 = (EditText) findViewById(R.id.joulesDisplay);
         Button submit = (Button) findViewById(R.id.button1);
         
         submit.setOnClickListener(new View.OnClickListener()
@@ -32,11 +34,20 @@ public class EnterData extends Activity {
     	            String stepCount = edtext.getText( ).toString( );
     	            int newJoules = new Integer(stepCount);
     	            newJoules /= 4;
+    	            
+    	            // TODO: potential security issue
+    	            Cursor c = db.query("users", new String[] {"joules"}, "username=?", new String[] {Home.name}, null, null, null);
+    	            
     	            // TO DO!
     	            // joules = SELECT joules from users where users = _id
-    	            // joules += newJoules;
-    	            // update users/joules with newJoules
-    	            //stepCount = Integer.toString(newJoules);
+    	            c.moveToFirst();
+    	            int joules = c.getInt(0);
+    	            joules += newJoules;
+    	            ContentValues values = new ContentValues();
+    	            values.put("joules", joules);
+    	            db.update("users", values, "username=?", new String[] {Home.name});
+    	            
+    	            edtext2.setText(new Integer(joules).toString() + " is your new Joule value! Great Job!");
     	        }
             });
     }

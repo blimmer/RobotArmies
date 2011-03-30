@@ -15,6 +15,9 @@ import android.view.*;
 
 public class Home extends Activity {
 	
+	public static String name; // Making assumption that only one
+	                          // user active at once
+	
 	private RobotArmiesDB database = new RobotArmiesDB(this);
 	
     /** Called when the activity is first created. */
@@ -38,7 +41,7 @@ public class Home extends Activity {
         cu = db.query("users", new String[] { "username" }, null, null, null, null, "_id");
         
         
-        String name = new String();
+        name = new String();
         if (cu.moveToFirst()) {
             name = cu.getString(0);
         }

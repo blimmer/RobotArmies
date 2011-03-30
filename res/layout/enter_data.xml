@@ -6,5 +6,5 @@
     >
     <EditText android:id="@+id/editText1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Enter in number of steps"></EditText>
     <Button android:text="Submit" android:id="@+id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    <TextView android:text="This is the enter data tab" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    <EditText android:id="@+id/joulesDisplay" android:layout_width="match_parent" android:layout_height="wrap_content" android:text=""></EditText>
 </LinearLayout>
