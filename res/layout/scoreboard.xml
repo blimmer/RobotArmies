@@ -21,7 +21,7 @@
     	>
     		<TextView android:text="You" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
-    		<TextView android:text="1000" android:layout_width="match_parent" android:layout_height="match_parent">
+    		<TextView android:text="" android:id="@+id/textView1" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
     	</TableRow>
     	<TableRow 
