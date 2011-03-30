@@ -133,8 +133,31 @@ public class Home extends Activity {
         	
         }
         
+        Cursor cu2 = db.query("robots", new String[] { "numberOf" }, null, null, null, null, "_id");
+        int numMinion = 1;
+        int numRepair = 2;
+        int numRocket = 0;
+        int numMaster = 0;
+        if (cu2.moveToFirst()) {
+            numMinion = cu.getInt(0);
+        }
+        if(cu.moveToNext()){
+        	numRepair = cu.getInt(0);
+        
+        }
+        
+        if(cu.moveToNext()){
+        	numRocket = cu.getInt(0);
+        
+        }
+        
+        if(cu.moveToNext()){
+        	numMaster = cu.getInt(0);
+        
+        }
+        
         GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(this));
+        gridview.setAdapter(new ImageAdapter(this, numMinion, numRepair, numRocket, numMaster ));
         
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
