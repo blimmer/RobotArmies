@@ -18,9 +18,9 @@ public class RobotArmiesDB extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL("CREATE TABLE robots (" + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
 				"type TEXT NOT NULL, " +
-				"hpPer UNSIGNED NOT NULL, " +
+				"hpPer UNSIGNED, " +
 				"numberOf UNSIGNED NOT NULL, " +
-				"groupHealthPercentage UNSIGNED NOT NULL, " +
+				"groupHealthPercentage UNSIGNED, " +
 				"owner INTEGER, " +
 				"FOREIGN KEY(owner) REFERENCES users(_id) );");
 		db.execSQL("CREATE TABLE users (" + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -38,7 +38,29 @@ public class RobotArmiesDB extends SQLiteOpenHelper {
 		
 		db.insertOrThrow("users", null, values);
 		
+		ContentValues roboti = new ContentValues();
+		roboti.put("owner", 1);
+		roboti.put("type","minion");
+		roboti.put("numberOf", 0);
+		db.insertOrThrow("robots", null, roboti);
 		
+		ContentValues robota = new ContentValues();
+		robota.put("owner", 1);
+		robota.put("type","repair");
+		robota.put("numberOf", 0);
+		db.insertOrThrow("robots", null, robota);
+		
+		ContentValues robotb = new ContentValues();
+		robotb.put("owner", 1);
+		robotb.put("type","rocket");
+		robotb.put("numberOf", 0);
+		db.insertOrThrow("robots", null, robotb);
+		
+		ContentValues robotc = new ContentValues();
+		robotc.put("owner", 1);
+		robotc.put("type","master");
+		robotc.put("numberOf", 0);
+		db.insertOrThrow("robots", null, robotc);
 		
 	}
 
