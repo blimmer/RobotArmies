@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-    <EditText android:id="@+id/editText1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Enter in number of steps"></EditText>
-    <Button android:text="Submit" android:id="@+id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-    <EditText android:id="@+id/joulesDisplay" android:layout_width="match_parent" android:layout_height="wrap_content" android:text=""></EditText>
+    android:layout_height="fill_parent" android:orientation="vertical">
+    <TextView android:text="Enter in your number of steps below" android:textColor="#FFD700" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    <EditText android:id="@+id/editText1" android:inputType="number" android:layout_width="match_parent" android:layout_height="wrap_content" android:text=""></EditText>
+    <Button android:text="Submit" android:id="@+id/button1" android:layout_height="wrap_content" android:layout_width="match_parent"></Button>
+   <!--<EditText android:id="@+id/joulesDisplay" android:layout_width="match_parent" android:layout_height="wrap_content" android:text=""></EditText> -->
 </LinearLayout>
