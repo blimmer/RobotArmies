@@ -4,16 +4,40 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
+    
+    
     <TextView android:text="" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
-    <ImageButton android:layout_width="wrap_content" android:fitsSystemWindows="true" android:id="@+id/RepairBot" android:background="#000000" android:layout_height="wrap_content" android:src="@drawable/repairbot"></ImageButton> 
-    <TextView android:text="cost: 100 Joules" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#000000" android:id="@+id/spacer" android:src="@drawable/spacer"></ImageView>
-    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/minionbot" android:id="@+id/MinionBot" android:background="#000000" android:fitsSystemWindows="true"></ImageButton>
-    <TextView android:text="cost: 200 Joules" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#000000" android:id="@+id/spacer" android:src="@drawable/spacer"></ImageView>
-    <ImageButton android:layout_width="wrap_content" android:fitsSystemWindows="true" android:id="@+id/RocketBot" android:background="#000000" android:layout_height="wrap_content" android:src="@drawable/rocketbot"></ImageButton>
-    <TextView android:text="cost: 300 Joules" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#000000" android:id="@+id/spacer" android:src="@drawable/spacer"></ImageView>
-    <ImageButton android:layout_width="wrap_content" android:fitsSystemWindows="true" android:id="@+id/MasterBot" android:background="#000000" android:layout_height="wrap_content" android:src="@drawable/masterbot"></ImageButton>
-	<TextView android:text="cost: 5280 Joules" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    
+    <ImageView android:id="@+id/minionbot" 
+    android:src="@drawable/minionbot" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    ></ImageView>
+    <Button android:text="Minion Bot - 100 Joules" android:id="@+id/minionbutton" android:layout_width="fill_parent" android:layout_height="35dip"></Button>
+    
+    <ImageView android:id="@+id/repairbot" 
+    android:src="@drawable/repairbot" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    ></ImageView>
+    <Button android:text="Repair Bot - 200 Joules" android:id="@+id/repairbutton" android:layout_width="fill_parent" android:layout_height="35dip"></Button>
+    
+    <ImageView android:id="@+id/rocketbot" 
+    android:src="@drawable/rocketbot" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    ></ImageView>
+    <Button android:text="Rocket Bot - 400 Joules" android:id="@+id/rocketbutton" android:layout_width="fill_parent" android:layout_height="35dip"></Button>
+    
+    <ImageView android:id="@+id/masterbot" 
+    android:src="@drawable/masterbot" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    ></ImageView>
+    <Button android:text="Master Bot - 800 Joules" android:id="@+id/masterbutton" android:layout_width="fill_parent" android:layout_height="35dip"></Button>
+
 </LinearLayout>

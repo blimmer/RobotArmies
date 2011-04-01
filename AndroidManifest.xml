@@ -18,6 +18,9 @@
         <activity android:name=".EnterData" android:label="@string/app_name" />
         <activity android:name=".Marketplace" android:label="@string/app_name" />
         <activity android:name=".Scoreboard" android:label="@string/app_name" />
+        <activity android:name=".BuyRobot" android:label="@string/app_name" />
+        <activity android:name=".Confirmation" android:label="@string/app_name" />
+        
 
     </application>
 </manifest>
