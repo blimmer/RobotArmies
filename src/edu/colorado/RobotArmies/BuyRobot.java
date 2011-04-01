@@ -20,9 +20,15 @@ public class BuyRobot extends Activity implements OnClickListener {
 		
         SQLiteDatabase db = database.getWritableDatabase();
         Cursor c = db.query("users", new String[] { "joules" }, null, null, null, null, "_id");
+        Cursor d = db.query("robots", new String[] {"numberOf"}, null, null, null, null, "_id");
         int joules = -1;
         if (c.moveToFirst()) {
             joules = c.getInt(0);
+        }
+        
+        int manyNow = 0;
+        if (d.moveToFirst()) {
+        	manyNow = d.getInt(0);
         }
                 
         int manyBots = joules/cost;
@@ -33,6 +39,7 @@ public class BuyRobot extends Activity implements OnClickListener {
         buyButton.setOnClickListener(this);
         
         text1.setText("The loyal minion bot will do exactly what you tell it to - nothing more, and nothing less." + 
+        		" You currently have " + manyNow + " minion bots." +
         	" The minion bot costs " + cost + " joules. You have " + joules + " joules.");
         
         if (joules < cost) {
@@ -42,6 +49,7 @@ public class BuyRobot extends Activity implements OnClickListener {
         	text2.setText("You can afford up to " + manyBots + " minion bots!");
         }
         c.close();
+        d.close();
 	}
 	
 	@Override
