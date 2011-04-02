@@ -53,7 +53,7 @@ public class Marketplace extends Activity implements OnClickListener {
 
 	}
 
-	@Override
+	//@Override
 	public void onClick(View v) {
 		Intent i = new Intent(this, BuyRobot.class);
 		switch (v.getId()) {
@@ -76,5 +76,10 @@ public class Marketplace extends Activity implements OnClickListener {
 		}
 
 	}
+	
+	/*@Override
+	protected void onResume( ){
+		super.onResume( );
+	}*/
 
 }

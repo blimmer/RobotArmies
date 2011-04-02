@@ -95,7 +95,7 @@ public class BuyRobot extends Activity implements OnClickListener {
 	        	" This type of robot costs " + cost + " joules. You have " + joules + " joules.\n");
         
         if (joules < cost) {
-        	text3.setText("Sorry, you don't have enough joules for a this type of robot. Perhaps you should go for a nice bike ride and earn some joules!");
+        	text3.setText("Sorry, you don't have enough joules for a this type of robot. Perhaps you should go for a nice bike ride and generate some joules!");
         	buyButton.setClickable(false);
         } else {
         	manyBots = joules/cost;
@@ -104,7 +104,7 @@ public class BuyRobot extends Activity implements OnClickListener {
         c.close();
 	}
 	
-	@Override
+	//@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.buybutton:
