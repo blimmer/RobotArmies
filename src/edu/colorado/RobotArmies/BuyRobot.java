@@ -40,7 +40,9 @@ public class BuyRobot extends Activity implements OnClickListener {
         TextView text3 = (TextView) findViewById(R.id.textView3);
         ImageView robot = (ImageView) findViewById(R.id.robot);
         View buyButton = this.findViewById(R.id.buybutton);
+        View backButton = this.findViewById(R.id.backtomp);
         buyButton.setOnClickListener(this);
+        backButton.setOnClickListener(this);
 		
 		switch(type) {
 		
@@ -113,6 +115,9 @@ public class BuyRobot extends Activity implements OnClickListener {
 			startActivity(i);
 			break;
 			// To do the rest of the buttons later
+		case R.id.backtomp:
+			finish();
+			break;
 		}
 		
 	}

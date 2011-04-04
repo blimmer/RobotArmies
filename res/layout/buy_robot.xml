@@ -17,5 +17,5 @@
 		android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
 	
 	<Button android:text="Purchase Robot" android:id="@+id/buybutton" android:layout_width="fill_parent" android:layout_height="35dip"></Button>
-
+	<Button android:text="Back to Marketplace" android:id="@+id/backtomp" android:layout_width="fill_parent" android:layout_height="35dip"></Button>
 </LinearLayout>
