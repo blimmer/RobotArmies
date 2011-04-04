@@ -12,4 +12,6 @@ android:layout_width="wrap_content" android:layout_height="wrap_content"></TextV
 
 <Button android:text="Purchase More Robots" android:id="@+id/backbutton" android:layout_width="fill_parent" android:layout_height="35dip"></Button>
 
+<Button android:text="Home" android:id="@+id/homebutton" android:layout_width="fill_parent" android:layout_height="35dip"></Button>
+
 </LinearLayout>

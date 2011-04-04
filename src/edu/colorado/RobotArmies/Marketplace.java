@@ -50,6 +50,9 @@ public class Marketplace extends Activity implements OnClickListener {
 		
 		View masterButton = this.findViewById(R.id.masterbutton);
 		masterButton.setOnClickListener(this);
+		
+		View homeButton = this.findViewById(R.id.homebutton2);
+		homeButton.setOnClickListener(this);
 
 	}
 
@@ -72,6 +75,10 @@ public class Marketplace extends Activity implements OnClickListener {
 		case R.id.masterbutton:
 			i.putExtra("type", MASTER);
 			startActivity(i);
+			break;
+		case R.id.homebutton2:
+			Intent j = new Intent(this, TabWidget.class);
+			startActivity(j);
 			break;
 		}
 

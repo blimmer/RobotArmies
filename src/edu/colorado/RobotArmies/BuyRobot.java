@@ -37,7 +37,6 @@ public class BuyRobot extends Activity implements OnClickListener {
         
         TextView text1 = (TextView) findViewById(R.id.textView1);
         TextView text2 = (TextView) findViewById(R.id.textView2);
-        TextView text3 = (TextView) findViewById(R.id.textView3);
         ImageView robot = (ImageView) findViewById(R.id.robot);
         View buyButton = this.findViewById(R.id.buybutton);
         buyButton.setOnClickListener(this);
@@ -51,7 +50,7 @@ public class BuyRobot extends Activity implements OnClickListener {
 	        	manyNow = d.getInt(0);
 	        }
 	        robot.setImageResource(R.drawable.minionbotlarge);
-	        text1.setText("The loyal minion bot will do exactly what you tell it to - nothing more, and nothing less.\n");
+	        text1.setText("The loyal minion bot will do exactly what you tell it to - nothing more, and nothing less.");
 	        typepass = Marketplace.MINION;
 	        d.close();
 	        break;
@@ -62,7 +61,7 @@ public class BuyRobot extends Activity implements OnClickListener {
 				manyNow = d.getInt(0);
 			}
 			robot.setImageResource(R.drawable.repairbotlarge);
-			text1.setText("The repair bot will keep your robots in tip-top shape, just like walking and creating more robots will keep you in tip top shape hurr hurr!");
+			text1.setText("The repair bot will keep your robots in tip-top shape, just like exercising and earning more robots will keep you in tip top shape!");
 			typepass = Marketplace.REPAIR;
 			d.close();
 			break;
@@ -95,11 +94,11 @@ public class BuyRobot extends Activity implements OnClickListener {
 	        	" This type of robot costs " + cost + " joules. You have " + joules + " joules.\n");
         
         if (joules < cost) {
-        	text3.setText("Sorry, you don't have enough joules for a this type of robot. Perhaps you should go for a nice bike ride and generate some joules!");
+        	text2.setText("Sorry, you don't have enough joules for a this type of robot. Go for a walk and earn some joules!");
         	buyButton.setClickable(false);
         } else {
         	manyBots = joules/cost;
-        	text3.setText("You can afford up to " + manyBots + " of this type of robot!");
+        	text2.setText("You can afford up to " + manyBots + " of this type of robot!");
         }
         c.close();
 	}

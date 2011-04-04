@@ -39,5 +39,9 @@
     android:layout_gravity="center_vertical|center_horizontal"
     ></ImageView>
     <Button android:text="Master Bot - 800 Joules" android:id="@+id/masterbutton" android:layout_width="fill_parent" android:layout_height="35dip"></Button>
+    
+    <TextView android:text="" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    
+    <Button android:text="Home" android:id="@+id/homebutton2" android:layout_width="fill_parent" android:layout_height="35dip"></Button>
 
 </LinearLayout>
