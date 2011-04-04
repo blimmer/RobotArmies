@@ -214,8 +214,12 @@ public class Home extends Activity {
             numMaster = roboCu.getInt(0);
         
         }
+        
+        
         GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(this, numMinion, numRepair, numRocket, numMaster ));
+        
+        
         
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {

@@ -16,9 +16,12 @@ public class ImageAdapter extends BaseAdapter{
 	int repair;
 	int rocket;
 	int master;
+	public String[] quantity = {"0","0","0","0"};
+	
 	//RobotArmiesDB database;
 	//private RobotArmiesDB database = new RobotArmiesDB(this);
 	//SQLiteDatabase db = database.getWritableDatabase();
+	
 	
 	
     public ImageAdapter(Context c, int minion, int repair,
@@ -33,6 +36,19 @@ public class ImageAdapter extends BaseAdapter{
         //this.database = database;
     }
 
+    
+    public void setQuantity(){
+    	
+    	quantity[0] = Integer.toString(minion);
+    	
+    	quantity[1] = Integer.toString(repair);
+    	quantity[2] = Integer.toString(rocket);
+    	quantity[3] = Integer.toString(master);
+    }
+    
+    
+    
+    
     public int getCount() {
         return robots.length;
     }
@@ -48,7 +64,7 @@ public class ImageAdapter extends BaseAdapter{
     // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
         //ImageView imageView;
-        
+    	this.setQuantity();
         View v;
         if (convertView == null) {  // if it's not recycled, initialize some attributes
             LayoutInflater li = (LayoutInflater)mContext.getSystemService(
@@ -98,10 +114,9 @@ public class ImageAdapter extends BaseAdapter{
 
     };
     
-    private String[] quantity = {
-    		Integer.toString(minion),Integer.toString(repair),Integer.toString(rocket),Integer.toString(master)	
-    		
-    };
+    
+    
+    
     
     
 
