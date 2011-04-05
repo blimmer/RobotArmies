@@ -86,8 +86,12 @@ public class Confirmation extends Activity implements OnClickListener {
 
 
 		TextView text1 = (TextView) findViewById(R.id.textView1);
+		
 		View backButton = this.findViewById(R.id.backbutton);
+		View homeButton = this.findViewById(R.id.homebutton);
 		backButton.setOnClickListener(this);
+		homeButton.setOnClickListener(this);
+		
 
 		text1.setText("Thank you for purchasing a " + types + " bot!" +
 				" You now have " + joules + " joules. You now have " +
@@ -104,7 +108,10 @@ public class Confirmation extends Activity implements OnClickListener {
 			//startActivity(i);
 			finish();
 			break;
-			// To do the rest of the buttons later
+		case R.id.homebutton:
+			Intent j = new Intent(this, TabWidget.class);
+			startActivity(j);
+			break;
 		}
 
 	}
