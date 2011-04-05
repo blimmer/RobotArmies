@@ -9,18 +9,28 @@
     		android:layout_width="match_parent"
     		android:layout_height="wrap_content"
     	>
-    		<TextView android:text="Name" android:layout_width="match_parent" android:layout_height="match_parent">
-    		</TextView>
-    		<TextView android:text="Joules" android:layout_width="match_parent" android:layout_height="match_parent">
-    		</TextView>
-    		<TextView android:text="   Minion Bots" android:layout_width="match_parent" android:layout_height="match_parent">
-    		</TextView>
-    		<TextView android:text="   Repair Bots" android:layout_width="match_parent" android:layout_height="match_parent">
-    		</TextView>
-    		<TextView android:text="   Rocket Bots" android:layout_width="match_parent" android:layout_height="match_parent">
-    		</TextView>
-    		<TextView android:text="   Master Bots" android:layout_width="match_parent" android:layout_height="match_parent">
-    		</TextView>
+    		<TextView android:text="Name" android:layout_width="match_parent" android:layout_height="match_parent"
+    		></TextView>
+    		<ImageView android:id="@+id/minionbot" 
+              android:src="@drawable/minionbot"
+              android:layout_width="match_parent" 
+              android:layout_height="match_parent"
+            ></ImageView>
+            <ImageView android:id="@+id/repairbot" 
+              android:src="@drawable/repairbot" 
+              android:layout_width="match_parent" 
+              android:layout_height="match_parent"            
+            ></ImageView>
+            <ImageView android:id="@+id/rocketbot" 
+              android:src="@drawable/rocketbot" 
+              android:layout_width="match_parent" 
+              android:layout_height="match_parent"
+            ></ImageView>
+            <ImageView android:id="@+id/masterbot" 
+              android:src="@drawable/masterbot" 
+              android:layout_width="match_parent" 
+              android:layout_height="match_parent"
+            ></ImageView>
     	</TableRow>
     	
     	
@@ -30,15 +40,13 @@
     	>
     		<TextView android:text="Mary" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
-    		<TextView android:text="1200" android:layout_width="match_parent" android:layout_height="match_parent">
+    		<TextView android:text="       3" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
-    		<TextView android:text="3" android:layout_width="match_parent" android:layout_height="match_parent">
+    		<TextView android:text="       2" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
-    		<TextView android:text="2" android:layout_width="match_parent" android:layout_height="match_parent">
+    		<TextView android:text="       4" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
-    		<TextView android:text="4" android:layout_width="match_parent" android:layout_height="match_parent">
-    		</TextView>
-    		<TextView android:text="1" android:layout_width="match_parent" android:layout_height="match_parent">
+    		<TextView android:text="       1" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
     	</TableRow>
     	
@@ -47,8 +55,6 @@
     		android:layout_height="wrap_content"
     	>
     		<TextView android:text="You" android:layout_width="match_parent" android:layout_height="match_parent">
-    		</TextView>
-    		<TextView android:text="" android:id="@+id/textView1" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
     		<TextView android:text="" android:id="@+id/textView2" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
@@ -65,15 +71,13 @@
     	>
     		<TextView android:text="Charles" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
-    		<TextView android:text="800" android:gravity="right" android:layout_width="match_parent" android:layout_height="match_parent">
+    		<TextView android:text="       5" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
-    		<TextView android:text="5" android:layout_width="match_parent" android:layout_height="match_parent">
+    		<TextView android:text="       1" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
-    		<TextView android:text="1" android:layout_width="match_parent" android:layout_height="match_parent">
+    		<TextView android:text="       0" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
-    		<TextView android:text="0" android:layout_width="match_parent" android:layout_height="match_parent">
-    		</TextView>
-    		<TextView android:text="0" android:layout_width="match_parent" android:layout_height="match_parent">
+    		<TextView android:text="       0" android:layout_width="match_parent" android:layout_height="match_parent">
     		</TextView>
     	</TableRow>
     	

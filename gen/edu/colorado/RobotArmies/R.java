@@ -39,13 +39,15 @@ public final class R {
         public static final int spacer=0x7f020019;
     }
     public static final class id {
-        public static final int backbutton=0x7f050008;
-        public static final int backtomp=0x7f050007;
+        public static final int backbutton=0x7f050007;
+        public static final int backtomp=0x7f050006;
         public static final int blank=0x7f050002;
         public static final int button1=0x7f05000a;
         public static final int buybutton=0x7f050004;
         public static final int editText1=0x7f050009;
         public static final int gridview=0x7f05000b;
+        public static final int homebutton=0x7f050008;
+        public static final int homebutton2=0x7f050018;
         public static final int icon_image=0x7f05000e;
         public static final int icon_number=0x7f05000f;
         public static final int icon_text=0x7f05000d;
@@ -59,12 +61,12 @@ public final class R {
         public static final int robot=0x7f050005;
         public static final int rocketbot=0x7f050014;
         public static final int rocketbutton=0x7f050015;
-        public static final int tableLayout1=0x7f050018;
+        public static final int tableLayout1=0x7f050019;
         public static final int textView1=0x7f050001;
         public static final int textView2=0x7f050003;
-        public static final int textView3=0x7f050006;
-        public static final int textView4=0x7f050019;
-        public static final int textView5=0x7f05001a;
+        public static final int textView3=0x7f05001a;
+        public static final int textView4=0x7f05001b;
+        public static final int textView5=0x7f05001c;
         public static final int widget=0x7f05000c;
     }
     public static final class layout {

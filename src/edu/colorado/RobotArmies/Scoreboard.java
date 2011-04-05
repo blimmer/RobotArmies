@@ -27,8 +27,8 @@ public class Scoreboard extends Activity {
         if (c.moveToFirst()) {
             joules = c.getInt(0);
         }
-        TextView text1 = (TextView) findViewById(R.id.textView1);
-        text1.setText( Integer.toString(joules) );
+        //TextView text1 = (TextView) findViewById(R.id.textView1);
+        //text1.setText( Integer.toString(joules) );
         
         //int robot = 0;
         //Cursor crobo = db.query("robots", new String[] {"numberOf"}, "type=?", new String[] {"minion"}, null, null, null);
@@ -51,19 +51,21 @@ public class Scoreboard extends Activity {
         
         }
         
+        String alignMe = "       ";
+        
         TextView textmin = (TextView) findViewById(R.id.textView2);
         System.out.println(numMinion);
         System.out.println(textmin);
-        textmin.setText(Integer.toString(numMinion));
+        textmin.setText(alignMe + Integer.toString(numMinion));
         
         TextView textrepair = (TextView) findViewById(R.id.textView3);
-        textrepair.setText(Integer.toString(numRepair));
+        textrepair.setText(alignMe + Integer.toString(numRepair));
         
         TextView textrocket = (TextView) findViewById(R.id.textView4);
-        textrocket.setText(Integer.toString(numRocket));
+        textrocket.setText(alignMe + Integer.toString(numRocket));
         
         TextView textmaster = (TextView) findViewById(R.id.textView5);
-        textmaster.setText(Integer.toString(numMaster));
+        textmaster.setText(alignMe + Integer.toString(numMaster));
         
         //crobo = db.query("robots", new String[] {"numberOf"}, "type=?", new String[] {"repair"}, null, null, null);
         /*if(c.moveToNext()){
