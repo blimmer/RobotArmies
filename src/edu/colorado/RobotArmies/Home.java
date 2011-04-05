@@ -43,11 +43,6 @@ public class Home extends Activity {
         } else {
             createNewUser( db );
         }
-        
-        //SQLiteDatabase db = database.getWritableDatabase();
-        //ContentValues values = new ContentValues();
-        //values.put("username", "ben limmer");
-        //db.insertOrThrow("users", null, values);
     }
     
     
@@ -102,7 +97,6 @@ public class Home extends Activity {
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int whichButton) {
-            @SuppressWarnings("unused")
             Editable nameIn = name_input.getText();
             String nameS = nameIn.toString();
             ContentValues initialUser = new ContentValues();
@@ -118,7 +112,7 @@ public class Home extends Activity {
           }
         });
 
-        alert.show();//TODO: user needs to enter their name, show dialog & save to db
+        alert.show();
     }
     
     // pops up a dialogue box that asks for weight
@@ -159,7 +153,6 @@ public class Home extends Activity {
         });
 
         alert2.show();
-        //TODO: user needs to enter their weight, show dialog & save to db
     }
     
     

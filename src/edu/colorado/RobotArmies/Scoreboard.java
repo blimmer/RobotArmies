@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 
 public class Scoreboard extends Activity {
@@ -32,7 +30,7 @@ public class Scoreboard extends Activity {
         TextView text1 = (TextView) findViewById(R.id.textView1);
         text1.setText( Integer.toString(joules) );
         
-        int robot = 0;
+        //int robot = 0;
         //Cursor crobo = db.query("robots", new String[] {"numberOf"}, "type=?", new String[] {"minion"}, null, null, null);
         Cursor crobo = db.query("robots", new String[] {"numberOf"}, null, null, null, null, "_id");
         if(crobo.moveToFirst()){

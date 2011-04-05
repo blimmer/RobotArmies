@@ -1,9 +1,7 @@
 package edu.colorado.RobotArmies;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.view.*;
-import android.database.*;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;

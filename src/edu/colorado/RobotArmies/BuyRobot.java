@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 import android.widget.ImageView;
-import android.graphics.drawable.Drawable;
 
 public class BuyRobot extends Activity implements OnClickListener {
 	
