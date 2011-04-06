@@ -105,9 +105,9 @@ public class Confirmation extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.backbutton:
-			//Intent i = new Intent(this, TabWidget.class);
-			//startActivity(i);
-			finish();
+			Intent i = new Intent(this, Marketplace.class);
+			startActivity(i);
+			//finish();
 			break;
 		case R.id.homebutton:
 			Intent j = new Intent(this, TabWidget.class);
