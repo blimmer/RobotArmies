@@ -73,7 +73,7 @@ public class Home extends Activity {
         }
         c = db.query("users", new String[] { "username" }, null, null, null, null, "_id");
         if (c.moveToFirst()) {
-            if (c.getString(0).isEmpty()) {
+            if (c.getString(0).length() == 0) {
             	// create a dialogue box to get name
                 addName( db );
             } else {
